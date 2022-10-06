@@ -10,7 +10,6 @@ import UIKit
 class MyProjectsViewController: UIViewController {
 
     @IBOutlet weak var Proyectos: UIButton!
-    @IBOutlet var tfHoraEnt: UITextField!
     
     @IBOutlet weak var DatePicker: UIDatePicker!
     
@@ -28,14 +27,11 @@ class MyProjectsViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_gb")
         formatter.dateFormat = "HH:mm"
-        tfHoraEnt.text = formatter.string(from: time)
-        tfHoraEnt.textColor = .link
         
         let timePicker = UIDatePicker()
         timePicker.datePickerMode = .time
         timePicker.addTarget(self, action: #selector(timePickerValueChanged(sender:)), for: UIControl.Event.valueChanged )
         timePicker.frame.size = CGSize(width: 0, height: 250)
-        tfHoraEnt.inputView = timePicker
 
     }
    
@@ -44,28 +40,16 @@ class MyProjectsViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_gb")
         formatter.dateFormat = "HH:mm"
-        tfHoraEnt.text = formatter.string(from: sender.date)
     }
 
     
     @IBAction func bttnRegistrar(_ sender: UIButton) {
         //Provisional
-        if lbDate.text != ""{
-            delay(2, closure: { () -> () in
-                let alerta = UIAlertController(title: "Registro Exitoso", message: "Porfavor espere la confirmacion de su coordinador", preferredStyle: .alert)
-                let bttnRegistro = UIAlertAction(title: "Continuar", style: .cancel, handler: nil)
+
+        let alerta = UIAlertController(title: "Registro Exitoso", message: "Porfavor espere la confirmacion de su coordinador", preferredStyle: .alert)
+        let bttnRegistro = UIAlertAction(title: "Continuar", style: .cancel, handler: nil)
                 alerta.addAction(bttnRegistro)
-                self.present(alerta, animated: true)
-            })
-        } else{
-            delay(2, closure: { () -> () in
-                let alerta = UIAlertController(title: "ERRO", message: "Selecciona los elementos necesarios", preferredStyle: .alert)
-                let bttnRegistro = UIAlertAction(title: "Continuar", style: .cancel, handler: nil)
-                alerta.addAction(bttnRegistro)
-                self.present(alerta, animated: true)
-            })
-            
-        }
+        self.present(alerta, animated: true)
     }
     
     func proyectSelect(){
