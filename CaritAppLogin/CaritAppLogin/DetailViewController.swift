@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
         let optionClosure = {(action : UIAction) in print(action.title)}
         popUpHorario.menu = UIMenu(children : [
             UIAction(title : "Cualquier Horario", state : .on, handler: optionClosure),
-            UIAction(title : "Horario Matutiono", handler: optionClosure),
+            UIAction(title : "Horario Matutino", handler: optionClosure),
             UIAction(title : "Horario Despertino", handler: optionClosure)])
         popUpHorario.showsMenuAsPrimaryAction = true
         popUpHorario.changesSelectionAsPrimaryAction = true
