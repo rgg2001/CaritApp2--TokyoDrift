@@ -7,74 +7,34 @@
 
 import UIKit
 
-class MyProjectsViewController: UIViewController {
+class MyProjectsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    let images = ["ropa"]
+    let titles = ["Banco de Ropa"]
+    let dates = ["9:00 am - 11:00 am Lun Mar Mie Jue Vie"]
 
-    @IBOutlet weak var Proyectos: UIButton!
     
-    @IBOutlet weak var DatePicker: UIDatePicker!
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
     
-    @IBOutlet weak var DatePicker2: UIDatePicker!
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let celli = collectionView.dequeueReusableCell(withReuseIdentifier: "post5", for: indexPath) as! Post5
+        celli.image.image = UIImage(named: images[indexPath.row])
+        celli.title.text = titles[indexPath.row]
+        celli.date.text = dates[indexPath.row]
+        
+        return celli
+    }
     
-    @IBOutlet weak var lbDate: UILabel!
-    
-    @IBOutlet weak var lbDate2: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        proyectSelect()
 
-        let time = Date()
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_gb")
-        formatter.dateFormat = "HH:mm"
-        
-        let timePicker = UIDatePicker()
-        timePicker.datePickerMode = .time
-        timePicker.addTarget(self, action: #selector(timePickerValueChanged(sender:)), for: UIControl.Event.valueChanged )
-        timePicker.frame.size = CGSize(width: 0, height: 250)
-
-    }
-   
-    @objc func timePickerValueChanged(sender: UIDatePicker){
-        //cuando el tiempo cambie, se pondra aca
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_gb")
-        formatter.dateFormat = "HH:mm"
-    }
-
-    
-    @IBAction func bttnRegistrar(_ sender: UIButton) {
-        //Provisional
-
-        let alerta = UIAlertController(title: "Registro Exitoso", message: "Porfavor espere la confirmacion de su coordinador", preferredStyle: .alert)
-        let bttnRegistro = UIAlertAction(title: "Continuar", style: .cancel, handler: nil)
-                alerta.addAction(bttnRegistro)
-        self.present(alerta, animated: true)
+        // Do any additional setup after loading the view.
     }
     
-    func proyectSelect(){
-        let option = {(action : UIAction) in print(action.title)}
-        Proyectos.menu = UIMenu(children : [
-            UIAction(title : "Selecciona Proyecto", state : .on, handler: option),
-            UIAction(title : "Banco de alimentos",handler: option),
-            UIAction(title : "Banco de Ropa", handler: option),
-            UIAction(title : "Banco de Medicamentos", handler: option),
-            UIAction(title : "Campañas de Emergencia", handler: option)])
-        Proyectos.showsMenuAsPrimaryAction = true
-        Proyectos.changesSelectionAsPrimaryAction = true
-    }
-     
-    @IBAction func dateAction(_ sender: Any) {
-        let dateFormater = DateFormatter()
-        dateFormater.dateFormat = "hh:mm"
-        lbDate.text = dateFormater.string(from: DatePicker.date)
-    }
-    
-    @IBAction func dateAction2(_ sender: Any) {
-        let dateFormater = DateFormatter()
-        dateFormater.dateFormat = "hh:mm"
-        lbDate2.text = dateFormater.string(from: DatePicker2.date)
-    }
+
     /*
     // MARK: - Navigation
 
@@ -85,4 +45,19 @@ class MyProjectsViewController: UIViewController {
     }
     */
 
+}
+
+class Post5: UICollectionViewCell {
+    
+    @IBOutlet weak var background: UIView!
+    @IBOutlet weak var image: UIImageView!
+    
+    @IBOutlet weak var title: UILabel!
+    
+    
+    @IBOutlet weak var date: UILabel!
+    override func awakeFromNib() {
+        background.layer.cornerRadius = 12
+        image.layer.cornerRadius = 12
+        }
 }

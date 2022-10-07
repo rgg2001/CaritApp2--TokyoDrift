@@ -11,6 +11,8 @@
 		F796EE2A28C99C8B0034CE58 /* MyProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F796EE2928C99C8B0034CE58 /* MyProjectsViewController.swift */; };
 		F796EE2C28C99CD30034CE58 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F796EE2B28C99CD30034CE58 /* ProjectsViewController.swift */; };
 		F796EE2E28C99D0A0034CE58 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F796EE2D28C99D0A0034CE58 /* FavoritesViewController.swift */; };
+		F7E9E8D028EFE645002B6391 /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9E8CF28EFE645002B6391 /* ProjectListViewController.swift */; };
+		F7E9E8D228EFE867002B6391 /* RegistrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9E8D128EFE867002B6391 /* RegistrarViewController.swift */; };
 		FB05F6C228E8AE350019CC70 /* AdminConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB05F6C128E8AE350019CC70 /* AdminConfirmViewController.swift */; };
 		FB28EAD428E656870022A671 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB28EAD328E656870022A671 /* Model.swift */; };
 		FB28EAD628E65DD30022A671 /* AdminProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB28EAD528E65DD30022A671 /* AdminProjectsViewController.swift */; };
@@ -40,6 +42,8 @@
 		F796EE2B28C99CD30034CE58 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		F796EE2D28C99D0A0034CE58 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		F796EE2F28C99D1E0034CE58 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F7E9E8CF28EFE645002B6391 /* ProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
+		F7E9E8D128EFE867002B6391 /* RegistrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarViewController.swift; sourceTree = "<group>"; };
 		FB05F6C128E8AE350019CC70 /* AdminConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminConfirmViewController.swift; sourceTree = "<group>"; };
 		FB28EAD328E656870022A671 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		FB28EAD528E65DD30022A671 /* AdminProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProjectsViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				FB28EAD328E656870022A671 /* Model.swift */,
 				FB05F6C128E8AE350019CC70 /* AdminConfirmViewController.swift */,
 				FB63056528C7929E00FBAA1B /* Main.storyboard */,
+				F7E9E8D128EFE867002B6391 /* RegistrarViewController.swift */,
+				F7E9E8CF28EFE645002B6391 /* ProjectListViewController.swift */,
 				FB28EAD528E65DD30022A671 /* AdminProjectsViewController.swift */,
 				FB49DC3828E33EF2004C5A05 /* DatePickerViewController.swift */,
 				F77DA34228DCF6F3009766CD /* DetailViewController.swift */,
@@ -205,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7E9E8D228EFE867002B6391 /* RegistrarViewController.swift in Sources */,
 				F796EE2A28C99C8B0034CE58 /* MyProjectsViewController.swift in Sources */,
 				FB32901F28DA1649003755D4 /* JPieChart.swift in Sources */,
 				F796EE2E28C99D0A0034CE58 /* FavoritesViewController.swift in Sources */,
@@ -212,6 +219,7 @@
 				F796EE2C28C99CD30034CE58 /* ProjectsViewController.swift in Sources */,
 				FB6B8BD428C8DFBE003C38F5 /* DashboardViewController.swift in Sources */,
 				FB28EAD628E65DD30022A671 /* AdminProjectsViewController.swift in Sources */,
+				F7E9E8D028EFE645002B6391 /* ProjectListViewController.swift in Sources */,
 				FB63056028C7929E00FBAA1B /* AppDelegate.swift in Sources */,
 				F77DA34328DCF6F3009766CD /* DetailViewController.swift in Sources */,
 				FBB3356528DA12260032ED9C /* ProfileViewController.swift in Sources */,
